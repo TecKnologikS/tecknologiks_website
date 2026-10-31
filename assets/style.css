@@ -1,0 +1,65 @@
+/* TecKnologikS site: a small hub that points to each app's own site.
+   System fonts only, no third-party requests, no cookies. */
+
+:root {
+  --bg: #0e0f12;
+  --surface: #17191e;
+  --line: #2a2d34;
+  --text: #f3f4f6;
+  --muted: #9ca3af;
+  --accent: #7c8cff;
+  --radius: 20px;
+  --max: 760px;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+
+header.site { display: flex; align-items: center; justify-content: space-between; padding: 20px 0; }
+.brand { font-weight: 800; font-size: 20px; color: var(--text); text-decoration: none; letter-spacing: -0.01em; }
+.brand span { color: var(--accent); }
+nav.site a { color: var(--muted); text-decoration: none; margin-left: 16px; font-size: 15px; }
+nav.site a:hover { color: var(--text); }
+
+.hero { padding: 40px 0 28px; }
+.hero h1 { font-size: clamp(32px, 8vw, 52px); line-height: 1.08; letter-spacing: -0.02em; margin: 0 0 14px; }
+.hero p { color: var(--muted); font-size: 19px; margin: 0; }
+
+.apps { display: grid; gap: 16px; margin: 8px 0 48px; }
+@media (min-width: 600px) { .apps { grid-template-columns: 1fr 1fr; } }
+.app {
+  display: flex; flex-direction: column; gap: 14px;
+  padding: 22px; border-radius: var(--radius);
+  background: var(--surface); border: 1px solid var(--line);
+  color: var(--text); text-decoration: none;
+  transition: border-color .15s, transform .15s;
+}
+.app:hover { border-color: var(--accent); transform: translateY(-2px); }
+.app .icon { width: 64px; height: 64px; border-radius: 15px; display: block; }
+.app .icon.text {
+  display: flex; align-items: center; justify-content: center;
+  background: #0b0b0b; color: #d4ff3a; font-weight: 900; font-size: 22px; letter-spacing: -0.03em;
+}
+.app h2 { margin: 0; font-size: 22px; }
+.app p { margin: 0; color: var(--muted); }
+.app .go { margin-top: auto; color: var(--accent); font-weight: 600; font-size: 15px; }
+
+.legal h1 { font-size: 32px; margin: 32px 0 8px; }
+.legal h2 { font-size: 20px; margin: 28px 0 6px; }
+.legal p { color: var(--muted); margin: 0 0 8px; }
+
+footer.site { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: 14px; }
+footer.site nav a { color: var(--muted); margin-right: 16px; }
+footer.site p { margin: 8px 0 0; }
