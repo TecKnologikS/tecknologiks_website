@@ -8,6 +8,7 @@ Site statique publié avec GitHub Pages (workflow `.github/workflows/pages.yml`,
 | --- | --- |
 | `index.html`, `fr/index.html` | Accueil (anglais, français) : liens vers trente30.tecknologiks.com et tapnrepeat.tecknologiks.com |
 | `legal.html`, `fr/mentions-legales.html` | Mentions légales |
+| `tiktok-terms.html`, `tiktok-privacy.html` | CGU et politique de confidentialité de l'appli TikTok `viede-dev-stats` (exigées par la revue TikTok for Developers) |
 | `app-ads.txt` | Vendeurs autorisés AdMob, servi à la racine du domaine |
 
 Le site ne charge aucune ressource externe et ne dépose aucun cookie.
